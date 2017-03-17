@@ -8,7 +8,7 @@
 //using namespace std;
 
 
-int main(int argc, char *argv[]){
+int main (int argc, char *argv[]) {
     // Verify the version of the library
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]){
     if (argc != 2) {
         ::std::cerr << "Usage: " << argv[0] << " file_to_store" << ::std::endl;
         return -1;
-        }
+    }
 
     swarm::Data data;
 
@@ -42,13 +42,12 @@ int main(int argc, char *argv[]){
     }
 
     ::std::ofstream obj(argv[1], ::std::ios::out);
-    if(!obj)
-        {
-            ::std::cerr<<"Error opening output file"<<::std::endl;
-            return -1;
-        }
+    if (!obj) {
+        ::std::cerr<<"Error opening output file"<<::std::endl;
+        return -1;
+    }
 
-    obj<<output;
+    obj << output;
     //fout = fopen(argv[1], "w");
     //fprintf(fout, "%s", output.c_str());
 
